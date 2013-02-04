@@ -1,0 +1,68 @@
+SHOPPING BASKET
+
+Scenario
+
+A ground breaking Broadband company has decided to roll out Broadband add-ons by
+geographic area in the United Kingdom. A software engineering team, developing the online
+store, is working on the story below.
+
+Offer Broadband Add-ons:
+As the head of broadband sales I want to let customers who live in an add-on area know that there
+are add-ons available for the broadband product in their basket so that they can add the add-on to
+their basket before checkout
+
+A “Broadband add-on” is an enhancement to a customer’s existing Broadband product. For
+example BB_ EXTRA_CAPACITY_ADD_ON enhances the Broadband ‘Lite’ product.
+
+The Broadband company has partnered with a third party that provides a service that checks
+the Add-on availability for a given postcode (either all add-ons are available for that postcode
+or none are).
+
+Included in the exercise pack
+
+The following files are included in the gr.hellasdirect.onlinestore package:
+• Basket.java
+• BroadbandAddOnService.java
+And the following files are included in the com.acme.serviceavailability package:
+• AvailabilityChecker.java
+• TechnicalFailureException.java
+
+Instructions
+
+Try and spend no more than two to three hours on this problem.
+You are required to provide an implementation of the BroadbandAddOnService interface -
+a simple service containing a single method.
+Any of the supplied files in the gr.hellasdirect.onlinestore package may be
+changed as you see fit, including the BroadbandAddOnService interface itself.
+You may choose any means of accepting input and producing output, including the use of
+a test harness.
+
+Requirements
+
+The codes for the standard Broadband products are:
+• CONNECT
+• LITE
+• UNLIMITED
+The codes for the add-ons are:
+• BB_ EXTRA_CAPACITY_ADD_ON
+• BB_FIXED_SINGLE_IP_ADDRESS
+• BB_FIXED_MULTIPLE_IP_ADDRESS
+
+Add-on availability for compatible products
+• BB_ EXTRA_CAPACITY_ADD_ON and BB_FIXED_SINGLE_IP_ADDRESS are
+available on the LITE product
+
+• BB_FIXED_SINGLE_IP_ADDRESS and BB_FIXED_MULTIPLE_IP_ADDRESS are
+available on the ULIMITED product
+
+
+
+The third party availability service returns the following String values:
+Value Description
+• SERVICE_AVAILABLE - add-ons are available for the given post code
+• SERVICE_UNAVAILABLE - add-ons are unavailable for the given post code
+• SERVICE_PLANNED - add-ons are not available right now, but should be available
+within the next 3 months
+• POSTCODE_INVALID - the supplied postcode is invalid
+
+If the service is unavailable / faulty then a TechnicalFailureException is thrown.
